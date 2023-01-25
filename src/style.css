@@ -1,0 +1,31 @@
+.to-do-container {
+    width: 60%;
+    height: 40%;
+    background-color: brown;
+    margin: auto;
+    /* margin-top: 10%; */
+    /* position: absolute; */
+}
+
+.title-and-refresh {
+    display: flex;
+}
+
+.input_and_add {
+    display: flex;
+}
+
+form {
+    display: block;
+    width: 100%
+}
+
+.input-task {
+    width: 90%;
+    padding: 5px;
+    margin: 20px 0;
+}
+
+.clearButton {
+    width: 100%;
+}
