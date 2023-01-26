@@ -52,13 +52,15 @@ form {
   opacity: 0.8;
 }
 
-li {
+.each-task {
   list-style-type: none;
-  display: flex;
+  /* display: flex; */
+  /* flex-direction: row; */
 }
 
 .task-to-be-done {
   margin-left: 25px;
   font-size: 17px;
   font-family: 'Courier New', Courier, monospace;
+  color: red;
 }

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
     <script src="./index.js" defer></script>
-    <link rel="stylesheet" href="src/style.css">
+    <script src="./functionality.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
@@ -18,10 +19,10 @@
                 <form action="">
                     <input type="text" class="input-task" placeholder="Add to your list...">
                 </form>
-                <button class="add">Add</button>
+                <button class="add" onclick="addnewTask()">Add</button>
             </div>
             <ul class="list-div"></ul>
-            <button class="clearButton">Clear all completed tasks</button>
+            <button class="clearButton" onclick="removeTask()">Clear all completed tasks</button>
         </section>
     </main>
 </body>
