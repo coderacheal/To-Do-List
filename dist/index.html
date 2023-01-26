@@ -5,26 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
-    <script src="./index.js"></script>
-    <link rel="stylesheet" href="./style.css">
-<script defer src="index.js"></script></head>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="src/style.css">
+<script defer src="main.js"></script></head>
 <body>
     <main>
         <section class="to-do-container">
             <div class="title-and-refresh">
-                <h3>To do list</h3>
-                <i>Refresh</i>
+                <h1>Today's To Do</h1>
             </div>
             <div class="input_and_add">
                 <form action="">
                     <input type="text" class="input-task" placeholder="Add to your list...">
                 </form>
-                <button>Add</button>
+                <button class="add">Add</button>
             </div>
+            <ul class="list-div"></ul>
             <button class="clearButton">Clear all completed tasks</button>
-            <ul class="list-div">
-
-            </ul>
         </section>
     </main>
 </body>
