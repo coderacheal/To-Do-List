@@ -2,10 +2,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: { index: path.resolve(__dirname, 'src', 'index.js') },
+  entry: './src/index.js',
 
   output: {
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
 
   plugins: [
@@ -19,7 +20,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
     ],
