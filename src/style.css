@@ -54,13 +54,26 @@ form {
 
 .each-task {
   list-style-type: none;
-  /* display: flex; */
-  /* flex-direction: row; */
+  border: none;
+  display: flex; 
 }
 
 .task-to-be-done {
-  margin-left: 25px;
-  font-size: 17px;
+  margin-left: 10px;
+  font-size: 18px;
   font-family: 'Courier New', Courier, monospace;
-  color: red;
+  border: 0;
 }
+
+
+.dots {
+  src: url('./images/dots.png');
+  height: 22px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.task-to-be-done:focus {
+  outline: none;
+}
+
