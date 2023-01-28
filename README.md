@@ -75,7 +75,10 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
  - cd my-folder
+
  - git clone https://github.com/coderacheal/To-Do-List.git
+
+ - git clone https://github.com/coderacheal/To-Do-List.git 
  - Once done, open the index.html file in live server
 
 
