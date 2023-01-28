@@ -1,4 +1,5 @@
 import { container } from './taskClass.js';
+import bin from '../images/bin.png';
 
 class Tasks {
   constructor() {
@@ -25,7 +26,7 @@ class Tasks {
       taskItem.innerHTML = `
       <input type="checkbox" id="task-${task.index}" name="task-${task.index}" ${task.completed ? 'checked' : 'unchecked'}>
       <p contenteditable="true" class="task-to-be-done">${task.description}</p>
-      <img src="../images/bin.png" alt="" class="dots">
+      <img src="${bin}" alt="" class="bin">
       `;
       container.appendChild(taskItem);
     });

@@ -66,21 +66,24 @@ form {
   list-style-type: none;
   border: none;
   display: flex;
+  padding-right: 30px;
 }
 
 .task-to-be-done {
+  display: flex;
+  flex-grow: 1;
   margin-left: 10px;
   font-size: 18px;
   font-family: 'Courier New', Courier, monospace;
   border: 0;
 }
 
-/* .dots {
+.bin {
   src: url('./images/dots.png');
   height: 22px;
   cursor: pointer;
   margin-top: 10px;
-} */
+}
 
 .task-to-be-done:focus {
   outline: none;
