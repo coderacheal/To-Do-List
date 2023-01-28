@@ -30,12 +30,22 @@ form {
   margin-left: 40px;
 }
 
+.input-task:focus {
+  outline: none;
+}
+
 .add {
   width: 10%;
   height: 35px;
   margin-top: 20px;
   background-color: white;
   border: 1px solid gray;
+}
+
+.add:active {
+  background-color: rgb(155, 249, 13);
+  border-color: rgb(155, 249, 13);
+  font-weight: bold;
 }
 
 .clearButton {
@@ -52,13 +62,26 @@ form {
   opacity: 0.8;
 }
 
-li {
+.each-task {
   list-style-type: none;
+  border: none;
   display: flex;
 }
 
 .task-to-be-done {
-  margin-left: 25px;
-  font-size: 17px;
+  margin-left: 10px;
+  font-size: 18px;
   font-family: 'Courier New', Courier, monospace;
+  border: 0;
+}
+
+/* .dots {
+  src: url('./images/dots.png');
+  height: 22px;
+  cursor: pointer;
+  margin-top: 10px;
+} */
+
+.task-to-be-done:focus {
+  outline: none;
 }
