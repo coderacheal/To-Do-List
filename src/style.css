@@ -30,12 +30,22 @@ form {
   margin-left: 40px;
 }
 
+.input-task:focus {
+  outline: none;
+}
+
 .add {
   width: 10%;
   height: 35px;
   margin-top: 20px;
   background-color: white;
   border: 1px solid gray;
+}
+
+.add:active {
+  background-color: rgb(155, 249, 13);
+  border-color: rgb(155, 249, 13);
+  font-weight: bold;
 }
 
 .clearButton {
@@ -55,7 +65,7 @@ form {
 .each-task {
   list-style-type: none;
   border: none;
-  display: flex; 
+  display: flex;
 }
 
 .task-to-be-done {
@@ -65,15 +75,13 @@ form {
   border: 0;
 }
 
-
-.dots {
+/* .dots {
   src: url('./images/dots.png');
   height: 22px;
   cursor: pointer;
   margin-top: 10px;
-}
+} */
 
 .task-to-be-done:focus {
   outline: none;
 }
-

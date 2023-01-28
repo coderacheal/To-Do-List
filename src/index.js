@@ -1,38 +1,92 @@
-// import './style.css';
+// eslint-disable-next-line import/named
+import './style.css';
+import add from './modules/add.js';
+import taskRemaining from './modules/taskFunctions.js';
+import {
+  addButton, taskInput, container, clearChecked,
+} from './modules/taskClass.js';
+import { save, retrieve } from './modules/storage.js';
 
-// const tasks = [
-//   {
-//     description: 'Pay the bills',
-//     completed: true,
-//     index: 0,
-//   },
-//   {
-//     description: 'Pick up the kids',
-//     completed: true,
-//     index: 1,
-//   },
-//   {
-//     description: 'Write some code',
-//     completed: true,
-//     index: 2,
-//   },
-//   {
-//     description: 'Drink coffee',
-//     completed: true,
-//     index: 3,
-//   },
-// ];
+taskInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    if (taskInput.value === '') {
+      e.preventDefault();
+    } else {
+      const task = add(e);
+      taskRemaining.add(task);
+      taskRemaining.init();
+      save();
+      taskRemaining.display();
+    }
+  }
+});
 
-// const loadTask = (arr) => {
-//   arr.forEach((task) => {
-//     const container = document.querySelector('.list-div');
-//     const listItem = document.createElement('li');
-//     listItem.innerHTML = `
-//     <input type="checkbox" name="" id="">
-//     <p class="task-to-be-done">${task.description}</p>
-//     `;
-//     container.appendChild(listItem);
-//   });
-// };
+addButton.addEventListener('click', (e) => {
+  if (taskInput.value === '') {
+    e.preventDefault();
+  } else {
+    const task = add(e);
+    taskRemaining.add(task);
+    taskRemaining.init();
+    save();
+    taskRemaining.display();
+  }
+});
 
-// loadTask(tasks);
+container.addEventListener('keypress', (e) => {
+  if (e.target.className === 'task-to-be-done' && e.key === 'Enter') {
+    if (e.target.textContent) {
+      e.preventDefault();
+      taskRemaining.update(e.target.textContent, e.target.parentElement.id);
+      save();
+    } else {
+      e.preventDefault();
+    }
+  }
+});
+
+container.addEventListener('change', (e) => {
+  let desc = taskRemaining.tasks[e.target.parentElement.id].description;
+  if (e.target.type === 'checkbox') {
+    if (e.target.checked) {
+      taskRemaining.tasks[e.target.parentElement.id].completed = true;
+      e.target.nextElementSibling.innerHTML = `<strike>${desc}</strike>`;
+      taskRemaining.tasks[e.target.parentElement.id].description = `<strike>${desc}</strike>`;
+      save();
+    } else {
+      taskRemaining.tasks[e.target.parentElement.id].completed = false;
+      desc = e.target.nextElementSibling.innerHTML.replaceAll(/(<strike>|<\/strike>)/g, '');
+      e.target.nextElementSibling.innerHTML = desc;
+      taskRemaining.tasks[e.target.parentElement.id].description = desc;
+      save();
+    }
+  } else {
+    e.preventDefault();
+  }
+});
+
+window.addEventListener('load', () => {
+  retrieve();
+  taskRemaining.display();
+});
+
+clearChecked.addEventListener('click', () => {
+  taskRemaining.deleteCompleted();
+  taskRemaining.updateIndex();
+  save();
+  taskRemaining.display();
+});
+
+container.addEventListener('click', (e) => {
+  if (e.target.className === 'fa fa-ellipsis-v') {
+    e.target.className = 'fa-solid fa-trash';
+  } else if (e.target.className === 'fa-solid fa-trash') {
+    taskRemaining.delete(e.target.parentElement.id);
+    taskRemaining.init();
+    taskRemaining.updateIndex();
+    save();
+    taskRemaining.display();
+  } else if (e.target.className === 'description') {
+    e.preventDefault();
+  }
+});
