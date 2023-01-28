@@ -78,15 +78,13 @@ clearChecked.addEventListener('click', () => {
 });
 
 container.addEventListener('click', (e) => {
-  if (e.target.className === 'fa fa-ellipsis-v') {
-    e.target.className = 'fa-solid fa-trash';
-  } else if (e.target.className === 'fa-solid fa-trash') {
+  if (e.target.className === 'bin') {
     taskRemaining.delete(e.target.parentElement.id);
     taskRemaining.init();
     taskRemaining.updateIndex();
     save();
     taskRemaining.display();
-  } else if (e.target.className === 'description') {
+  } else if (e.target.className === 'task-to-be-done') {
     e.preventDefault();
   }
 });
