@@ -77,12 +77,7 @@ clearChecked.addEventListener('click', () => {
   taskRemaining.display();
 });
 
-
 container.addEventListener('click', (e) => {
-  // alert('hello');
-  // if (e.target.className === 'bin') {
-  //   alert('hello');
-  //   e.target.className = 'bin';
   if (e.target.className === 'bin') {
     taskRemaining.delete(e.target.parentElement.id);
     taskRemaining.init();
