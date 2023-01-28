@@ -33,11 +33,14 @@
 - HTML
 - CSS
 - JavaScript
+- Webpack
 
 
 ### Key Features <a name="Mobile Version of Portfolio"></a>
 
 - **Dynamically add list of tasks**
+- **Check tasks as completed**
+- **Delete checked items**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -47,7 +50,7 @@
 
 - [Live Demo Link](https://coderacheal.github.io/)
 
-
+Please note that this link is currently not active
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -72,7 +75,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
  - cd my-folder
- - git clone https://github.com/coderacheal/Portfolio.git 
+ - git clone https://github.com/coderacheal/To-Do-List.git
  - Once done, open the index.html file in live server
 
 
@@ -98,6 +101,7 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
  - npx stylelint "**/*.{css,scss}" in your terminal
+ - npx eslint . in your terminal
 
 
 
@@ -159,7 +163,7 @@ Feel free to check the [issues page](../../issues/).
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank Web Bos for his tutorials on flexbox
+I would like to thank Microverse
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
