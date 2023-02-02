@@ -48,7 +48,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://coderacheal.github.io/)
+- [Live Demo Link](https://coderacheal.github.io/To-Do-List/dist/)
 
 Please note that this link is currently not active
 
