@@ -48,9 +48,9 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://coderacheal.github.io/To-Do-List/dist/)
+- [Live Demo Link](https://coderacheal.github.io/ToDoList/dist/)
 
-Please note that this link is currently not active
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,15 +86,18 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
- - A web browser and a stable internet
+ 
 
 
 
 ### Usage
 
-To run the project, execute the following command:
+Because this project uses webpack as a bundler, to run the project, execute the following command:
 
-- Right click on the index.html file and open with live server
+  <code>npm run start</code> 
+- OR
+  
+<code>npm start</code> 
 
 
 
