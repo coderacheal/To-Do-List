@@ -1,5 +1,3 @@
-// eslint-disable-next-line import/named
-// eslint-disable-next-line import/no-named-as-default-member
 import './style.css';
 import add from './modules/add.js';
 import { taskRemaining } from './modules/taskFunctions.js';
