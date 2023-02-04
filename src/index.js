@@ -1,7 +1,8 @@
 // eslint-disable-next-line import/named
+// eslint-disable-next-line import/no-named-as-default-member
 import './style.css';
 import add from './modules/add.js';
-import taskRemaining from './modules/taskFunctions.js';
+import { taskRemaining } from './modules/taskFunctions.js';
 import {
   addButton, taskInput, container, clearChecked,
 } from './modules/taskClass.js';
@@ -71,7 +72,7 @@ window.addEventListener('load', () => {
 });
 
 clearChecked.addEventListener('click', () => {
-  taskRemaining.deleteCompleted();
+  taskRemaining.deleteListItemCompleted();
   taskRemaining.updateIndex();
   save();
   taskRemaining.display();
@@ -79,7 +80,7 @@ clearChecked.addEventListener('click', () => {
 
 container.addEventListener('click', (e) => {
   if (e.target.className === 'bin') {
-    taskRemaining.delete(e.target.parentElement.id);
+    taskRemaining.deleteListItem(e.target.parentElement.id);
     taskRemaining.init();
     taskRemaining.updateIndex();
     save();

@@ -32,7 +32,7 @@ class Tasks {
     });
   };
 
-  deleteCompleted = () => {
+  deleteListItemCompleted = () => {
     this.tasks = this.tasks.filter((task) => task.completed === false);
     container.innerHTML = '';
   };
@@ -43,10 +43,12 @@ class Tasks {
     });
   };
 
-  delete = (index) => {
+  deleteListItem = (index) => {
     this.tasks = this.tasks.filter((task) => task.index !== Number(index) + 1);
   };
 }
 
-const taskRemaining = new Tasks();
-export default taskRemaining;
+export const taskRemaining = new Tasks();
+// export taskRemaining;
+
+export const { add } = new Tasks();
