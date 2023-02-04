@@ -1,8 +1,13 @@
 /** @jest-environment jsdom */
 
 import {
-  addMock, toDoListArray, localStorage, displayToDoListMock, deleteTaskMock,
-  markTaskAsCompletedMock, clearAllCompletedTasksMock,
+  addMock,
+  toDoListArray,
+  localStorage,
+  displayToDoListMock,
+  deleteTaskMock,
+  markTaskAsCompletedMock,
+  clearAllCompletedTasksMock,
 } from './__mocks__/functions.js';
 
 document.body.innerHTML = `
@@ -59,5 +64,13 @@ describe('editing text', () => {
 
   test('should set edited task in local storage', () => {
     expect(localStorage.getItem('tasks')).toHaveLength(1);
+  });
+});
+
+describe('updating an item completed status', () => {
+  test('should update an completed status and set in local storage', () => {
+    markTaskAsCompletedMock(0);
+    expect(toDoListArray[0].completed).toBeTruthy();
+    expect(localStorage.getItem('tasks')[0].completed).toBeTruthy();
   });
 });
