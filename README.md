@@ -137,8 +137,8 @@ A web browser
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Making the add button functional**
-- **Making the clear all completed tasks button functional**
+- **Add a database that keeps the history of past list for a few days**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
