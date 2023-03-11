@@ -128,7 +128,19 @@ A web browser
 👤 **Racheal Appiah-kubi**
 
 - GitHub: [@githubhandle](https://github.com/coderacheal)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+
+
+👤 **Martin Karugaba**
+
+- GitHub: [@githubhandle](https://github.com/martinkarugaba)
+
+
+
+👤 **Eligrand Nezerwa**
+
+- GitHub: [@githubhandle](https://github.com/nezerwa)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

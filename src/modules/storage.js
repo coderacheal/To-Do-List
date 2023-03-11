@@ -1,4 +1,4 @@
-import taskRemaining from './taskFunctions.js';
+import { taskRemaining } from './taskFunctions.js';
 
 export const save = () => {
   localStorage.setItem('tasks', JSON.stringify(taskRemaining.tasks));
